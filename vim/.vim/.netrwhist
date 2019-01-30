@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/sx/mir/blipchin/rocket/dragon.sigi/.svn'
+let g:netrw_dirhist_2='/sx/mir/blipchin/config.trunk/dragon/dragonfc/flight_software/multi_rio'
+let g:netrw_dirhist_3='/sx/mir/blipchin/gnc/ddsim/Unit_Tests/Dragon_self_align_test_configs'
+let g:netrw_dirhist_4='/etc/sudoers.d'
+let g:netrw_dirhist_5='/'
+let g:netrw_dirhist_6='/sx/proton/blipchin/rocket/rocket.trunk/dat/ThrottleFdirMvac_uto'
+let g:netrw_dirhist_7='/home/blipchin/MIT/research/ft_paper'

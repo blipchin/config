@@ -1,0 +1,66 @@
+# Read File Into Vector
+snippet readfile
+	std::vector<char> v;
+	if (FILE *${2:fp} = fopen(${1:"filename"}, "r")) {
+		char buf[1024];
+		while (size_t len = fread(buf, 1, sizeof(buf), $2))
+			v.insert(v.end(), buf, buf + len);
+		fclose($2);
+	}${3}
+# std::map
+snippet map
+	std::map<${1:key}, ${2:value}> map${3};
+# std::vector
+snippet vector
+	std::vector<${1:char}> v${2};
+# Namespace
+snippet ns
+	namespace ${1:`Filename('', 'my')`} {
+		${2}
+	} /* $1 */
+# Class Definition
+snippet cld
+	class ${1:`Filename('$1', 'name')`} ${2:: public }
+	{
+	public:
+	    $1(${2});
+	    ~$1();
+
+	protected:
+	
+	private:
+	    ${3:/* data */}
+	};
+# Class Definition
+snippet cl
+	${1:`Filename('$1', 'name')`}::$1(${4}) { }
+	$1::~$1() { }
+# Function
+snippet fun
+	${1:void} ${2:`Filename('', 'name')`}::${3:function_name}(${4})
+	{
+	    ${5:/* code */}
+	}
+#SacAbortIf
+snippet sif
+	SacAbortIf(${1}, ${2:false});
+snippet seq
+	SacAbortIfEq(${1}, , ${2}, ${3:false});
+#SacAbortIfNot
+snippet sifn
+	SacAbortIfNot(${1}, ${2:false});
+snippet neq
+	SacAbortIfNeq(${1}, ${2}, ${3:false});
+# struct
+snippet struct
+	struct ${1}
+	{
+	    ${2}
+	};
+# verbose print
+snippet dbp
+	if(dbverbose() >= ${1:`2`})
+	    dbnprintf(100, "${2}\n");
+# regular print
+snippet dp
+	dbnprintf(100, "${1}\n");
